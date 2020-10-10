@@ -2,6 +2,9 @@ const { ESBuildPlugin } = require('esbuild-loader');
 module.exports = {
   mode: 'development',
   entry: './src/main.tsx',
+  resolve: {
+    extensions: ['.js', '.ts', '.tsx'],
+  },
   output: {
     path: require('path').resolve(__dirname, './dist'),
     filename: 'bundle.js',
